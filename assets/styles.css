@@ -62,6 +62,7 @@ html{
 .topnav ul a:hover{
     border-bottom: 0.2rem solid #0047ae;
     color: #0047ae;
+    font-weight: 700;
 }
 
 .navbar {
@@ -288,6 +289,12 @@ main {
     margin: auto;
 }
 
+.centerr {
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+}
+
 
 .popular-test {
     width: 100%;
@@ -295,6 +302,13 @@ main {
     margin-top: 22rem;
     height: 395px;
     display: flex;
+}
+
+.popular-test {
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+    height: 395px;
 }
 
 /* -- POPULAR TEST/ PACKAGES SECTION -- */
@@ -305,8 +319,8 @@ main {
     margin: auto;
     width: 100%;
     max-width: 1320px;
-    background-color:#ffff;
-    color: black;
+    background-color: var(--color-white);
+    color: var(--color-black);
     padding: 15px;
     border-radius: 15px;
 }
@@ -315,6 +329,7 @@ main {
     position: relative;
     width: 235%;
     left: 0;
+    animation: 20s test-slider infinite;
     display: flex;
 }
 
@@ -328,7 +343,7 @@ main {
 }
 
 .popular-test-container>p {
-    font-size: 1.5625rem;
+    font-size: var(--size-cardHeading2);
     font-weight: 600;
 }
 
@@ -346,7 +361,7 @@ main {
 
 .know-more {
     text-align: right;
-    color: #0b51b3;
+    color: var(--color-text-blue);
     margin: 35px 0 5px;
 }
 .know-more:hover{
@@ -364,7 +379,7 @@ main {
 .price {
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(90deg,  #fecc4e;   65%, #0b51b3; 65%);
+    background: linear-gradient(90deg, var(--color-yellow) 65%, var(--color-text-blue) 65%);
     padding: 7px;
     border-radius: 5px;
 }
@@ -380,7 +395,7 @@ main {
 }
 
 .popular-test ul span {
-    color: #212529;
+    font-size: var(--color-body-text);
     margin-left: 5px;
 }
 
@@ -399,117 +414,51 @@ main {
    font-weight: 600;
    cursor: pointer;
 }
+@keyframes test-slider {
+    20% {
+        left: 0;
+    }
 
+    20% {
+        left: 0;
+    }
 
+    25% {
+        left: -33.33%;
+    }
 
- /*----------------- SEARCH TEST AND PACKAGES SECTION----------------------------- */
+    45% {
+        left: -33.33%;
+    }
 
- .test-packages {
+    50% {
+        left: -66.66%;
+    }
+
+    70% {
+        left: -66.66%;
+    }
+
+    75% {
+        left: -99.99%;
+    }
+
+    100% {
+        left: -99.99%;
+    }
+
+}
+
+/*----------------- SEARCH TEST AND PACKAGES SECTION----------------------------- */
+
+.test-packages {
+    width: 100%;
+    margin-top: 45px;
+}
+
+.test-packages-content {
+    position: relative;
     width: 50%;
-    margin-top: 45px;
-}
-
-.test-packages-content {
-    position: relative;
-    width: 150%;
-    left: 0;
-    display: flex;
-    align-items: center;
-    margin-left: -20px;
-}
-
-.test-packages-content p {
-    font-weight: 400;
-}
-
-.test-packages-container {
-    margin: auto;
-    width: 100%;
-    max-width: 1320px;
-    background-color: #ffff;
-    color: black;
-    padding: 15px;
-    border-radius: 15px;
-}
-
-.test-package-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.test-packages-button {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.test-packages-button a {
-    text-decoration: none;
-    color: #ffff;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 7px 40px;
-    background-color: #bcbcbc;
-    border-radius: 20px;
-}
-
-.test-packages-button .lifestyle {
-    background-color:#fecc4e;
-    color: black;
-}
-
-.test-packages-container>p {
-    font-size: 1.5625rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.test-searchBar {
-    border: 1px solid #bcbcbc;
-    width: 25%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.test-searchBar i {
-    margin: 3px 15px;
-    font-size: 18px;
-    color: #0b51b3;
-}
-
-.test-searchBar input {
-    border: none;
-    width: 100%;
-    padding-left: 10px;
-    outline: none;
-}
-
-.test-package-header div {
-    padding: 5px 0px;
-}
-
-.view-all {
-    text-align: end;
-}
-
-.view-all a {
-    color: #0b51b3;
-    font-size: 1.25rem;
-}
-
-
- /*----------------- SEARCH TEST AND PACKAGES SECTION----------------------------- */
-
- .test-packages {
-    width: 100%;
-    margin-top: 45px;
-}
-
-.test-packages-content {
-    position: relative;
-    width: 150%;
     left: 0;
     display: flex;
     align-items: center;
@@ -931,7 +880,14 @@ body {
 }
 
 
-/* -- QUALITY SECTION -- */
+ /* ------------ BLOG and ARTICLE SECTION ---------------------*/
+ .blog-content .blog-item {
+    border-radius: 0px;
+    background-color: transparent;
+    height: 13.5rem;
+    width: 26rem; 
+   } 
+      /* -- QUALITY SECTION -- */
 
 .quality-container {
     display: flex;
@@ -989,6 +945,18 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+    padding: 25px 0;
+
+/* <--  Accreditation & Certification  --> */
+
+.achievements-container {
+    display: flex;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20rem;
     padding: 25px 0;
 }
 
@@ -1077,4 +1045,313 @@ body {
 
 .app-card-text h2 {
     font-size: var(--size-cardHeading2);
+}
+
+
+.blog-item img {
+    width: 100%;
+    height: 60%;
+}
+
+.blog-content {
+    align-items: center;
+}
+
+.blog-item>span {
+    font-size: var(--size-12px);
+}
+
+.blog-item>p {
+    margin-top: 5px;
+}
+.blog-container{
+   position: relative;
+}
+.left-arrow, .right-arrow{
+/* margin-left: px;  */
+margin-top: -40px;
+}
+.blog-carausel .right-arrow{
+   margin-right: 15px;
+}
+
+
+
+/* <!-- Experties --> */
+
+.experties-container {
+    background-color: var(--color-white);
+    border-radius: 15px;
+    margin: 30px 0 30px;
+    padding: 15px;
+}
+
+.experties-content h1 {
+    font-size: var(--size-cardHeading2);
+}
+
+.experties-content h2 {
+    font-size: var(--size-sub-heading);
+}
+
+.experties-content p {
+    margin: 5px 0 15px;
+}
+
+
+/* <!-- Frequently Asked Question --> */
+
+.faq-container {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 1rem 0.75rem;
+    margin: 10px 0 35px;
+}
+.faq-container .view-all{
+   align-self: flex-end;
+}
+.faq-container h3 {
+    font-size: var(--size-cardHeading2);
+    font-weight: 550;
+}
+
+.faq-buttons-container {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.faq-button {
+    background-color: var(--color-grey-button);
+    color: var(--color-white);
+    padding: 0.5rem 3rem;
+    border: none;
+    border-radius: 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.labs {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+.faq-button:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+.faq-button:focus {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--color-yellow);
+}
+
+.faq-question .question {
+    font-size: 1.2rem;
+    color: var(--color-text-blue);
+    font-weight: 500;
+}
+/* -----------Lab Test At Home and Popular Test Above Footer ---------*/
+
+.lab-testAtHome,
+.popular-test-at-footer {
+    width: 100%;
+    background-color: var(--color-background);
+    padding: 20px 0;
+}
+
+.lab-test-container,
+.popular-test-container-at-footer {
+    max-width: 1500px;
+    margin: auto;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 15px;
+
+}
+
+.location-list,
+.popular-test-list-at-footer {
+    display: flex;
+    gap: 7px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    line-height: 25px;
+}
+
+.lab-test-content,
+.popular-test-content-at-footer {
+    padding: 15px 15px 100px;
+
+}
+
+.lab-test-content h1,
+.popular-test-content-at-footer h6 {
+    font-size: var(--size-cardHeading2);
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    color: var(--color-cardHeading);
+}
+
+.location-list a,
+.popular-test-list-at-footer a {
+
+    color: var(--color-black);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.location-list a:hover,
+.popular-test-list-at-footer a:hover {
+    color: var(--color-background-blue);
+    text-decoration: underline;
+}
+
+.back-to-top{
+   text-align: end;
+}
+.back-to-top img{
+   margin-right: 7%;
+}
+
+
+/*------------------------ Footer---------------------- */
+
+.footer-section {
+    width: 100%;
+    position: relative;
+}
+
+.footer-top {
+    width: 100%;
+    background-color: rgb(254, 204, 78);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'PT sans';
+    padding: 50px;
+}
+
+.footer-links {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    justify-content: space-around;
+}
+
+.link_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.link_col h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.footer-bottom {
+    width: 100%;
+    background-color: #0047Af;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-family: 'PT sans';
+
+}
+
+.footer-bottom .copyright {
+    max-width: 1280px;
+    color: white;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+
+}
+
+.footer-bottom a {
+    text-decoration: none;
+}
+.footer-info div a{
+   color: white;
+}
+
+.follow_us {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    text-transform: capitalize;
+}
+
+.social_icons {
+    display: flex;
+    gap: 4px;
+
+}
+
+.copyright h2 {
+    font-weight: 700;
+}
+
+.footer_icons {
+    background-color: #fecc4e;
+    color: #0b51b3;
+    border-radius: 50%;
+    padding: 8px;
+   
+}
+.footer_icon i{
+   font-size: 1.5rem;
+}
+.certificate-2 p{
+   padding: 0 0 15px 0;
+}
+
+/* ------MEDIA QUERY---- */
+
+@media screen and (max-width:1480px) {
+
+    .box-2,
+    .item-container,
+    .popular-test-container {
+        max-width: 1140px;
+    }
 }
